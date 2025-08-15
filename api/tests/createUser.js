@@ -46,6 +46,6 @@ fetch(`${BASE_URL}/api/register`, {
     }
 
     fs.writeFileSync(outputFile, log, 'utf8');
-    console.log(`📄 Output saved to ${outputFile}`);
+    console.log(` Output saved to ${outputFile}`);
   })
   .catch(error => console.error("Error:", error));
