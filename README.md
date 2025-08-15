@@ -20,8 +20,6 @@ Project Overview
 
 #Setup
 1.Clone the repository:
-git clone <repository-url>
-cd <repository-folder>
 
 2.Install dependencies:
 npm install
