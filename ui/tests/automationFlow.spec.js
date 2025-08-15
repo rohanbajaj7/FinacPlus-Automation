@@ -8,7 +8,7 @@ test.describe('Book Store Application Navigation and Book Search', () => {
         const home = new HomePage(page);
         const loginPage = new LoginPage(page);
 
-        // Step 1: Go to DemoQA homepage
+        // Step 1: Go to homepage
         await home.gotoHomePage();
         await page.waitForTimeout(1000);
 
@@ -24,7 +24,7 @@ test.describe('Book Store Application Navigation and Book Search', () => {
         await expect(page).toHaveURL(/.*books/);
         await page.waitForTimeout(1000);
 
-        // Step 5: Click Login button on Books page
+        // Step 5: Click Login button 
         await loginPage.clickLoginOnBooksPage();
         await page.waitForTimeout(1000);
 
@@ -48,7 +48,7 @@ test.describe('Book Store Application Navigation and Book Search', () => {
         await expect(usernameLocator).toBeVisible();
         await page.waitForTimeout(1000);
         await expect(logoutButtonLocator).toBeVisible();
-        console.log("✅ Username and Logout button are visible");
+        console.log(" Username and Logout button are visible");
         await page.waitForTimeout(1000);
 
         // Step 10: Scroll down and click "Book Store" button
@@ -74,7 +74,7 @@ test.describe('Book Store Application Navigation and Book Search', () => {
         // Step 14: Save to file
         const fileContent = `Title: ${title.trim()}\nAuthor: ${author.trim()}\nPublisher: ${publisher.trim()}`;
         fs.writeFileSync('book_details.txt', fileContent);
-        console.log("📄 Book details saved to book_details.txt");
+        console.log("Book details saved to book_details.txt");
         await page.waitForTimeout(1000);
 
         // Step 15: Logout
@@ -83,9 +83,9 @@ test.describe('Book Store Application Navigation and Book Search', () => {
 
         // Step 16: Confirm logout
         await expect(page).toHaveURL(/.*login/);
-        console.log("✅ Successfully logged out");
+        console.log(" Successfully logged out");
 
-        // Step 17: Final wait for observation
+        
         await page.waitForTimeout(2000);
     });
 });

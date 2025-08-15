@@ -3,4 +3,4 @@ Response Body: {
   "id": 4,
   "token": "QpwL5tke4Pnpja7X4"
 }
-✅ Registration Successful! User ID: 4
+ Registration Successful! User ID: 4

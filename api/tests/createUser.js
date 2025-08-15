@@ -14,7 +14,6 @@ const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
 const outputDir = path.join(__dirname, '../../outputs');
 const outputFile = path.join(outputDir, `createUser_${timestamp}.txt`);
 
-// Ensure folder exists
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir, { recursive: true });
 }
@@ -38,12 +37,12 @@ fetch(`${BASE_URL}/api/register`, {
     let log = `Status Code: ${result.status}\nResponse Body: ${JSON.stringify(result.body, null, 2)}\n`;
 
     if (result.body.id) {
-      console.log(`✅ Registration Successful! User ID: ${result.body.id}`);
-      log += `✅ Registration Successful! User ID: ${result.body.id}\n`;
+      console.log(` Registration Successful! User ID: ${result.body.id}`);
+      log += ` Registration Successful! User ID: ${result.body.id}\n`;
       fs.writeFileSync(path.join(__dirname, '../../userId.json'), JSON.stringify({ id: result.body.id }, null, 2));
     } else {
-      console.error("❌ Registration Failed!");
-      log += "❌ Registration Failed!\n";
+      console.error(" Registration Failed!");
+      log += " Registration Failed!\n";
     }
 
     fs.writeFileSync(outputFile, log, 'utf8');

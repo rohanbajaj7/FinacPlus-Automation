@@ -1,0 +1,6 @@
+Update Status: 200
+Update Response: {
+  "name": "Eve Patched",
+  "updatedAt": "2025-08-15T12:37:02.266Z"
+}
+User 4 updated successfully.
