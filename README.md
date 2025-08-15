@@ -31,7 +31,7 @@ BASE_URL=https://reqres.in
 API_KEY=your_api_key_here
 
 
-#Run UI Tests
+# Run UI Scripts
 Use this command npx playwright test ui/tests/automationFlow.spec.js or npx playwright test --headed
 
 Output: book_details.txt containing book info.
@@ -43,7 +43,7 @@ Output: Logs saved in api/outputs/
 
 userId.json stores the user ID for fetching/updating.
 
-#Notes
+# Notes
 UI tests require Playwright
 API scripts require Node.js 18+
 .gitignore includes node_modules/
